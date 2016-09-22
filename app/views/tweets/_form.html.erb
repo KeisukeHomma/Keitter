@@ -1,0 +1,33 @@
+<% if notice.present? %>
+    <div class="alert alert-info" role="alert">
+      <strong><%= notice %></strong>
+    </div>
+<% end %>
+
+<%= form_for(@tweet, url: choose_new_or_edit) do |f| %>
+  <% if @tweet.errors.any? %>
+    <div id="error_explanation">
+      <div class="alert alert-danger" role="alert">
+        <strong><%= @tweet.errors.count %>件のエラーがあります</strong> 
+        <ul>
+          <% @tweet.errors.full_messages.each do |msg| %>
+            <li style="list-style-type: none;"><%= msg %></li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  <% end %>
+
+
+  <div class="form-group tweet-form">
+    <%= f.text_field :content, class: 'form-control', placeholder: '何を呟く？' %> 
+  </div>
+  
+  
+
+  <%= f.submit 'ケイートする', class: 'btn btn-primary btn-lg tweet-button2' %>
+  
+    
+<% end %>
+
+<%= link_to "タイムラインにもどる", tweets_path, class: 'btn btn-sm btn-default back-button' %>

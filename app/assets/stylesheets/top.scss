@@ -1,0 +1,231 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  text-align: center;
+  background-color: #F5F8FA;
+  background: #F5F8FA;
+  font-family: "Hiragino Maru Gothic W4 JIS2004",
+  "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN",
+  "メイリオ", Meiryo, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  color: #5e5e5e;
+}
+
+header {
+  width: 100%;
+  background-color: #2AA4EF;
+  height: 54px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-default {
+    border: 0;
+    padding: 2px 7px 2px 23px;
+    margin: 0;
+}
+
+.navbar {
+    background-color: #2AA4EF;
+    height: 100%;
+    color: white;
+    margin-bottom: 0px;
+    border-radius: 0;
+    box-shadow: 0px 1.5px 2px 1.5px rgba(0,0,0,0.2);
+}
+
+.navbar-default {
+  .navbar-brand {
+    color: #fff;
+    &:hover {
+      color: #ccc;
+    }
+  }
+  .navbar-nav > li > a {
+    color: #fff;
+    &:hover, &:focus {
+      color: #ccc;
+    }
+  }
+  .navbar-nav > .open > a {
+    background-color: #2AA4EF;
+    color: white;
+    &:hover, &:focus {
+      background-color: #2AA4EF;
+      color: #ccc;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+.navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    color: #fff;
+    text-align: center;
+    &:hover, &:focus {
+      color: white;
+    }
+  }
+  .navbar-default .navbar-toggle {
+    background-color: #2AA4EF;
+    &:hover, &:focus {
+      background-color: #2AA4EF;
+    }
+  }
+}
+
+
+.main-header {
+  padding-bottom: 15%;
+  width: 100%;
+  background-size: cover;
+  background-image: url("header.jpg");
+  background-attachment: fixed;
+}
+
+.main-header img {
+  display: block;
+  margin: 0 auto;
+  width: 25%;
+  padding-top: 15%;
+}
+
+.about {
+  background-color: white;
+  color: #333;
+  padding: 80px;
+}
+
+.function {
+  background-color: #e9e9e9;
+  padding: 80px;
+  padding-bottom: 185px;
+}
+
+/*.function-images {
+  width: 100%;
+  display: table;
+  margin-top: 60px;
+  table-layout: fixed;
+}
+
+.function-image {
+  display: table-cell;
+  width: 100%;
+}*/
+
+footer {
+  width: 100%;
+  background-color:#2AA4EF;
+  padding: 20px 0 10px 0;
+  color: white;
+  margin: auto;
+  font-size: 12px;
+  position: absolute;
+  bottom: 0;
+}
+
+/*_______________________
+      トップに戻る
+________________________*/
+.page-top-btn {
+  display: none;
+  border-radius: 50px;
+  background: #336699;
+  width: 60px;
+  height: 60px;
+  transition: all 0.3s;
+  cursor: pointer;
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  z-index: 20;
+  a {
+    display: block;
+    color: white;
+    line-height: 60px;
+    text-decoration: none;
+  }
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+
+
+/*------------------
+  ケイート一覧画面
+------------------*/
+
+h1{
+  padding: 40px 0 0 0;
+}
+
+.tweet-button{
+  background: #2AA4EF;
+  height: 100px;
+  width: 100px;
+  position: block;
+  margin: 0 auto;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  border-radius: 50%;
+  color: #fff;
+}
+
+.tweet-button p{
+  position: relative;
+  top: 40px;
+}
+
+.box{
+  border-radius: 4px;
+  margin: 20px 0 20px 0;
+}
+
+.tweet-box{
+  background: #EEEEEE;
+  padding: 20px 0 0 0;
+  margin: 10px 0 0 0;
+  border-radius: 5px;
+}
+
+.tweet-box h4{
+  text-align: center;
+}
+
+.tweet-edit, .tweet-delet{
+  padding: 15px 0 20px 0;
+  bottom: 0;
+}
+
+.tweet-edit{
+}
+
+.tweet-delete{
+}
+
+
+/*------------------
+    ケイート画面
+------------------*/
+
+.tweet-submit{
+  margin-top: 40px;
+}
+
+.tweet-form{
+  margin-top: 40px;
+}
+
+.back-button{
+  margin-top: 120px;
+}
+
+.tweet-button2{
+  margin-top: 20px;
+}

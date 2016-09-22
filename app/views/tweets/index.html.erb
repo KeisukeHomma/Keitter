@@ -1,0 +1,38 @@
+<% if notice.present? %>
+    <div class="alert alert-info" role="alert">
+      <strong><%= notice %></strong>
+    </div>
+<% end %>
+
+<h1>投稿されたケイートたち</h1>
+
+<%= link_to new_tweet_path do %>
+    <div class="tweet-button">
+        <p>ケイートする</p>
+    </div>
+<% end %>
+
+<div class="container">
+    <div class="row">
+        <% @tweets.each do |tweet| %>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 box">
+                <div class="tweet-box">
+                    <h3><%= tweet.content %></h3>
+                    <div class="row">
+                        <div class="col-xs-6" style="padding: 0;">
+                            <div class="tweet-edit">
+                                <%= link_to "なおす", edit_tweet_path(tweet.id), class: 'btn btn-sm btn-success' %> 
+                            </div>
+                        </div>
+                        <div class="col-xs-6" style="padding: 0;">
+                            <div class="tweet-edit">
+                                <%= link_to "けす", tweet_path(tweet.id), method: :delete, data: { confirm: '本当にこのケイートを消しますか？' }, class: 'btn btn-default btn-sm btn-danger' %>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <% end %>
+    </div>
+    
+</div>
